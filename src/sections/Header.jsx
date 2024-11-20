@@ -1,6 +1,11 @@
+/* eslint-disable react/prop-types */
 import { Link as LinkScroll } from "react-scroll";
 
-const NavLink = ({ title }) => <LinkScroll>{title}</LinkScroll>;
+const NavLink = ({ title }) => (
+  <LinkScroll className="base-bold text-p4 uppercase transition-colors duration-500 cursor-pointer hover:text-p1 max-lg:my-4 max-lg:h5">
+    {title}
+  </LinkScroll>
+);
 
 const Header = () => {
   return (
@@ -14,7 +19,26 @@ const Header = () => {
           <nav>
             <ul className="flex max-lg:block max-lg:px-12">
               <li className="nav-li">
-                <NavLink title="Features" />
+                <NavLink title="features" />
+                <div className="dot" />
+                <NavLink title="pricing" />
+              </li>
+
+              <li className="nav-logo">
+                <LinkScroll>
+                  <img
+                    src="/images/xora.svg"
+                    alt="logo"
+                    width={160}
+                    height={55}
+                  />
+                </LinkScroll>
+              </li>
+
+              <li className="nav-li">
+                <NavLink title="faq" />
+                <div className="dot" />
+                <NavLink title="download" />
               </li>
             </ul>
           </nav>
