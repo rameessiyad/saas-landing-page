@@ -2,9 +2,9 @@ import Header from "./sections/Header";
 
 const App = () => {
   return (
-    <main className="overflow-hidden">
+    <div>
       <Header />
-    </main>
+    </div>
   );
 };
 
