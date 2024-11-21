@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import { useState } from "react";
 import { Link as LinkScroll } from "react-scroll";
 
 const NavLink = ({ title }) => (
@@ -8,6 +9,7 @@ const NavLink = ({ title }) => (
 );
 
 const Header = () => {
+  const [isOpen, setisOpen] = useState(false);
   return (
     <header className="fixed top-0 left-0 z-50 w-full py-10">
       <div className="container flex items-center justify-between max-lg:px-5">
@@ -44,8 +46,11 @@ const Header = () => {
             </nav>
           </div>
         </div>
-        <button className="lg:hidden size-10 z-2 border-2 border-s4/25  rounded-full flex justify-center items-center">
-          <img src="/images/magic.svg" alt="menu" />
+        <button
+          className="lg:hidden size-10 z-2 border-2 border-s4/25  rounded-full flex justify-center items-center"
+          onClick={() => setisOpen((prev) => !prev)}
+        >
+          <img src={`/images/${isOpen ? "close" : "magic"}.svg`} alt="menu" />
         </button>
       </div>
     </header>
