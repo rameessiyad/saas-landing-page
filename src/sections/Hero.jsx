@@ -1,4 +1,5 @@
 import { Element, Link as LinkScroll } from "react-scroll";
+import Button from "../components/Button";
 
 const Hero = () => {
   return (
@@ -16,7 +17,9 @@ const Hero = () => {
               We designed Xora AI video editor to be easy to use, quick to learn
               and surprisingly powerful.
             </p>
-            <LinkScroll to="features" spy smooth offset={-100}>hello</LinkScroll>
+            <LinkScroll to="features" spy smooth offset={-100}>
+              <Button icon="/images/zap.svg">Try it now</Button>
+            </LinkScroll>
           </div>
         </div>
       </Element>

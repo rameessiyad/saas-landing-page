@@ -69,7 +69,7 @@ const Header = () => {
               />
               <img
                 src="/images/bg-outlines-fill.png"
-                width={960}
+                width={960} 
                 height={280}
                 alt="oultine"
                 className="absolute inset-0 mix-blend-soft-light opacity-5"
